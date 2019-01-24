@@ -36,15 +36,21 @@ button {
     color: #000;
 }
 
+#buttons {
+    position: relative;
+}
 #carousel .cloud9-item, #buttons button {
   cursor: pointer;
   color: #fff;
+  background: none;
+  border: none;
+  outline: none;
 }
 
 .cloud9-item {
-    height: 50px;
+    min-height: 50px;
     width: 100px;
-    background:#fff;
+    // background:#fff;
 }
 .left, .right {
     color: #fff;
@@ -98,4 +104,77 @@ footer {
         background: #131313;
         z-index: -1;
     }
+}
+
+//****** GALLERY STYLES ******
+
+
+.demo-gallery>ul {
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.demo-gallery>ul>li {
+    margin-bottom: 0;
+    max-width: 100%;
+    width: 25%;
+    display: block;
+    list-style: outside none none;
+}
+
+.demo-gallery>ul>li a {
+    display: block;
+    overflow: hidden;
+    position: relative;
+}
+
+.demo-gallery>ul>li a>img {
+    -webkit-transition: -webkit-transform 0.15s ease 0s;
+    -moz-transition: -moz-transform 0.15s ease 0s;
+    -o-transition: -o-transform 0.15s ease 0s;
+    transition: transform 0.15s ease 0s;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+    height: 100%;
+    width: 100%;
+}
+
+.demo-gallery>ul>li a:hover>img {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1);
+}
+
+.demo-gallery>ul>li a:hover .demo-gallery-poster>.img-wrap {
+    opacity: 1;
+}
+
+.demo-gallery>ul>li a .demo-gallery-poster {
+    background-color: rgba(0, 0, 0, 0.1);
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    -webkit-transition: background-color 0.15s ease 0s;
+    -o-transition: background-color 0.15s ease 0s;
+    transition: background-color 0.15s ease 0s;
+}
+
+.demo-gallery>ul>li a .demo-gallery-poster>.img-wrap {
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    -webkit-transition: opacity 0.3s ease 0s;
+    -o-transition: opacity 0.3s ease 0s;
+    transition: opacity 0.3s ease 0s;
+    border-radius: 50%;
+    height: 58px;
+    width: 58px;
+    background: #fff;
+}
+
+.demo-gallery>ul>li a:hover .demo-gallery-poster {
+    background-color: rgba(0, 0, 0, 0.8);
 }
