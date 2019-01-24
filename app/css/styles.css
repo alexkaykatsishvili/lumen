@@ -19,6 +19,21 @@ body {
 ::-webkit-scrollbar {
   width: 10px; }
 
+#carousel {
+  color: #000; }
+
+#carousel .cloud9-item, #buttons button {
+  cursor: pointer;
+  color: #fff; }
+
+.cloud9-item {
+  height: 50px;
+  width: 100px;
+  background: #fff; }
+
+.left, .right {
+  color: #fff; }
+
 .flex {
   display: flex;
   justify-content: center;

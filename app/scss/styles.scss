@@ -2,7 +2,14 @@ html,
 body {
     background: #000;
     color: #fff;
-    // cursor: none; 
+    // cursor: url("../img/Pointer.png") 1 10, auto; 
+}
+
+button {
+    // cursor: url("../img/Pointer.png") 1 1, auto; 
+    &:hover {
+        // background: none;
+    }
 }
 
 ::-webkit-scrollbar-button {
@@ -25,8 +32,23 @@ body {
     width: 10px;
 }
 
+#carousel {
+    color: #000;
+}
 
+#carousel .cloud9-item, #buttons button {
+  cursor: pointer;
+  color: #fff;
+}
 
+.cloud9-item {
+    height: 50px;
+    width: 100px;
+    background:#fff;
+}
+.left, .right {
+    color: #fff;
+}
 .flex {
     display: flex;
     justify-content: center;

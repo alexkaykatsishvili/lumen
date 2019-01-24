@@ -23,4 +23,15 @@
     //     $(this).css({ background: originalBGplaypen });
     // });
 
+    $("#carousel").css( {'visibility': 'hidden', 'position': 'static'}).Cloud9Carousel( {
+        onLoaded: function( carousel ) {
+        // Show carousel
+        $("#carousel").css( {'visibility': 'visible', 'position': 'static'} );
+      },
+      buttonLeft: $("#buttons > .left"),
+      buttonRight: $("#buttons > .right"),
+      autoPlay: 0,
+      bringToFront: true
+    } );
+
 })(jQuery);
