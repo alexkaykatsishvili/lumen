@@ -29,7 +29,8 @@ body {
 #buttons {
   position: relative; }
 
-#carousel .cloud9-item, #buttons button {
+#carousel .cloud9-item,
+#buttons button {
   cursor: pointer;
   color: #fff;
   background: none;
@@ -40,7 +41,8 @@ body {
   min-height: 50px;
   width: 100px; }
 
-.left, .right {
+.left,
+.right {
   color: #fff; }
 
 .flex {
@@ -141,3 +143,11 @@ footer .footer {
 
 .demo-gallery > ul > li a:hover .demo-gallery-poster {
   background-color: rgba(0, 0, 0, 0.8); }
+
+@media (max-width: 600px) {
+  .heading {
+    font-weight: 600;
+    font-size: 32px;
+    color: #FFF; }
+  h2 {
+    font-size: 20px; } }

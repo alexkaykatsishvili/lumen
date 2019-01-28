@@ -2,10 +2,11 @@ html,
 body {
     background: #000;
     color: #fff;
-    cursor: url("../img/Pointer.png") 1 10, auto; 
+    cursor: url("../img/Pointer.png") 1 10, auto;
 }
 
 button {
+
     // cursor: url("../img/Pointer.png") 1 1, auto; 
     &:hover {
         // background: none;
@@ -43,12 +44,14 @@ button {
 #buttons {
     position: relative;
 }
-#carousel .cloud9-item, #buttons button {
-  cursor: pointer;
-  color: #fff;
-  background: none;
-  border: none;
-  outline: none;
+
+#carousel .cloud9-item,
+#buttons button {
+    cursor: pointer;
+    color: #fff;
+    background: none;
+    border: none;
+    outline: none;
 }
 
 .cloud9-item {
@@ -56,9 +59,12 @@ button {
     width: 100px;
     // background:#fff;
 }
-.left, .right {
+
+.left,
+.right {
     color: #fff;
 }
+
 .flex {
     display: flex;
     justify-content: center;
@@ -81,7 +87,7 @@ button {
         left: 0;
         width: 100%;
         height: 100%;
-       	// background: radial-gradient(540.00px at 50% 50%, rgba(0, 0, 0, 0.68) 0%, #0A0A0A 100%);
+        // background: radial-gradient(540.00px at 50% 50%, rgba(0, 0, 0, 0.68) 0%, #0A0A0A 100%);
         z-index: 1;
     }
 
@@ -181,4 +187,15 @@ footer {
 
 .demo-gallery>ul>li a:hover .demo-gallery-poster {
     background-color: rgba(0, 0, 0, 0.8);
+}
+
+@media (max-width: 600px) {
+    .heading {
+        font-weight: 600;
+        font-size: 32px;
+        color: #FFF;
+    }
+    h2 {
+        font-size: 20px;
+    }
 }
