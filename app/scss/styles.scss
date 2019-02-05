@@ -3,20 +3,10 @@ body {
     background: #000;
     color: #fff;
     font-family: 'Montserrat', sans-serif;
-    // cursor: url("../img/Pointer.png") 1 10, auto; 
 }
 
-*:hover {
-    // cursor: url("../img/Pointer.png") 1 10, auto; 
-    // cursor: url("../img/Pointer.png") 1 10, auto;
-}
-
-button {
-
-    // cursor: url("../img/Pointer.png") 1 1, auto; 
-    &:hover {
-        // background: none;
-    }
+* {
+    cursor: url("../img/Pointer.png") 34 34, auto;
 }
 
 svg#logo {
@@ -28,15 +18,20 @@ h1 {
 }
 
 .construction {
-    max-height: 80vh;
-    // overflow: scroll;
-    // position: relative;
+    height: 80vh;
+
+    .carousel {
+        max-width: 1560px;
+        margin: 0 auto;
+        // margin-top: -70px;
+        height: 900px;
+    }
 }
 
 .nav {
     div {
-        width: 250px;
-        height: 250px;
+        width: 300px;
+        height: 300px;
         border-radius: 50%;
         background: -moz-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0) 100%);
         /* FF3.6-15 */
@@ -74,6 +69,13 @@ h1 {
     width: 10px;
 }
 
+.carousel {
+    max-width: 1560px;
+    margin: 0 auto;
+    // margin-top: -70px;
+    height: 500px;
+}
+
 #carousel {
     color: #000;
 }
@@ -92,6 +94,7 @@ button.left {
     left: 5%;
     transform: translateX(-50%);
 }
+
 button.right {
     position: absolute;
     top: 50%;
@@ -101,7 +104,7 @@ button.right {
 
 #carousel .cloud9-item,
 #buttons button {
-    cursor: pointer;
+    // cursor: pointer;
     color: #fff;
     background: none;
     border: none;
@@ -116,7 +119,10 @@ button.right {
     // background: #fff;
     a {
         color: #000;
-        font-size: 18px;
+        font-size: 20px;
+        font-weight: 700;
+        text-align: center;
+
         &:hover {
             text-decoration: none;
         }
@@ -136,13 +142,14 @@ button.right {
 }
 
 .viewport {
-    height: 100vh;
+    min-height: 100vh;
     margin-bottom: 200px;
     -webkit-box-shadow: 0px 2px 5px 0px rgba(24, 24, 24, 0.75);
     -moz-box-shadow: 0px 2px 5px 0px rgba(24, 24, 24, 0.75);
     box-shadow: 0px 2px 5px 0px rgba(24, 24, 24, 0.75);
     // background: url("../img/room.jpg") 50% no-repeat;
     background: url("../img/room.jpg") 0 0 no-repeat;
+
     &:after {
         content: ""; // ::before and ::after both require content
         position: absolute;
@@ -152,7 +159,7 @@ button.right {
         height: 100%;
         background: radial-gradient(540.00px at 50% 50%, rgba(0, 0, 0, 0.68) 0%, #0A0A0A 100%);
         z-index: 1;
-        opacity: .2;
+        opacity: .6;
     }
 
     & * {
@@ -163,8 +170,8 @@ button.right {
 }
 
 .heading {
-    font-weight: 600;
-    font-size: 72px;
+    font-weight: 500;
+    font-size: 60px;
     color: #FFF;
 }
 
@@ -195,9 +202,11 @@ footer {
         a {
             color: #fff;
         }
+
         &__phones {
             align-items: flex-start;
         }
+
         &__info {
             p {
                 font-size: 14px;
@@ -218,7 +227,11 @@ footer {
 .demo-gallery>ul>li {
     margin-bottom: 0;
     max-width: 100%;
-    width: 25%;
+    // width: 25%;
+    width: 250px;
+    height: auto;
+    max-height: 500px;
+    overflow: hidden;
     display: block;
     list-style: outside none none;
 }
@@ -241,8 +254,8 @@ footer {
 }
 
 .demo-gallery>ul>li a:hover>img {
-    -webkit-transform: scale3d(1.1, 1.1, 1.1);
-    transform: scale3d(1.1, 1.1, 1.1);
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
 }
 
 .demo-gallery>ul>li a:hover .demo-gallery-poster>.img-wrap {
