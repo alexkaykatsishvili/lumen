@@ -2,12 +2,13 @@ html,
 body {
     background: #000;
     color: #fff;
+    font-family: 'Montserrat', sans-serif;
     // cursor: url("../img/Pointer.png") 1 10, auto; 
 }
 
 *:hover {
     // cursor: url("../img/Pointer.png") 1 10, auto; 
-    cursor: url("../img/Pointer.png") 1 10, auto;
+    // cursor: url("../img/Pointer.png") 1 10, auto;
 }
 
 button {
@@ -19,22 +20,32 @@ button {
 }
 
 svg#logo {
-    width: 300px;
+    width: 200px;
+}
+
+h1 {
+    text-transform: uppercase;
 }
 
 .construction {
-    height: 80vh;
+    max-height: 80vh;
+    // overflow: scroll;
+    // position: relative;
 }
 
 .nav {
     div {
-        width: 350px;
-        height: 230px;
+        width: 250px;
+        height: 250px;
         border-radius: 50%;
-      background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 60%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
-background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 60%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
-background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 60%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+        background: -moz-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0) 100%);
+        /* FF3.6-15 */
+        background: -webkit-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0) 100%);
+        /* Chrome10-25,Safari5.1-6 */
+        background: radial-gradient(ellipse at center, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0) 100%);
+        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#00ffffff', GradientType=1);
+        /* IE6-9 fallback on horizontal gradient */
     }
 }
 
@@ -67,11 +78,24 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
     color: #000;
 }
 
-#buttons {
-    // position: relative;
+// #buttons {
+//     // position: relative;
+//     position: absolute;
+//     bottom: 140px;
+//     left: 50%;
+//     transform: translateX(-50%);
+// }
+
+button.left {
     position: absolute;
-    bottom: 140px;
-    left: 50%;
+    top: 50%;
+    left: 5%;
+    transform: translateX(-50%);
+}
+button.right {
+    position: absolute;
+    top: 50%;
+    right: 5%;
     transform: translateX(-50%);
 }
 
@@ -88,10 +112,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
     display: block;
     min-height: 50px;
     width: 100px;
+
     // background: #fff;
     a {
         color: #000;
-        font-size: 16px;
+        font-size: 18px;
+        &:hover {
+            text-decoration: none;
+        }
     }
 }
 
@@ -113,8 +141,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
     -webkit-box-shadow: 0px 2px 5px 0px rgba(24, 24, 24, 0.75);
     -moz-box-shadow: 0px 2px 5px 0px rgba(24, 24, 24, 0.75);
     box-shadow: 0px 2px 5px 0px rgba(24, 24, 24, 0.75);
-    background: url("../img/room.jpg") 50% no-repeat;
-
+    // background: url("../img/room.jpg") 50% no-repeat;
+    background: url("../img/room.jpg") 0 0 no-repeat;
     &:after {
         content: ""; // ::before and ::after both require content
         position: absolute;
@@ -123,9 +151,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
         width: 100%;
         height: 100%;
         background: radial-gradient(540.00px at 50% 50%, rgba(0, 0, 0, 0.68) 0%, #0A0A0A 100%);
-        // background: radial-gradient(540.00px at 50% 50%, rgba(0, 0, 0, 0.68) 0%, #0A0A0A 100%);
         z-index: 1;
-        opacity: .5;
+        opacity: .2;
     }
 
     & * {
@@ -167,6 +194,15 @@ footer {
 
         a {
             color: #fff;
+        }
+        &__phones {
+            align-items: flex-start;
+        }
+        &__info {
+            p {
+                font-size: 14px;
+                margin-top: 10px;
+            }
         }
     }
 }
@@ -244,12 +280,21 @@ footer {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
+
+
+@media (min-width: 1370px) {
+    svg#logo {
+        width: 300px;
+    }
+}
+
 @media (max-width: 600px) {
     .heading {
         font-weight: 600;
         font-size: 32px;
         color: #FFF;
     }
+
     h2 {
         font-size: 20px;
     }
